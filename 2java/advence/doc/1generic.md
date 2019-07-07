@@ -4,7 +4,7 @@
 
 泛型就是参数化类型。在创建/使用的时候，传入类型。
 
-##为什么使用泛型？
+## 为什么使用泛型？
 
 适用于多种数据类型执行相同的代码
 
@@ -12,7 +12,7 @@
 
 泛型使用`<>`表示
 
-##泛型的三种方式
+## 泛型的三种方式
 
 泛型类、泛型接口和泛型方法
 
@@ -45,15 +45,15 @@ public class GenericMethod {
 
 ```
 
-##泛型的约束
+## 泛型的约束
 
-###1.不能使用基本类型实例化参数
+### 1.不能使用基本类型实例化参数
 
 ```
 GenericClass<int> doubleGenericClass = new GenericClass<>();//错误的
 ```
 
-###2.不能查询类型
+### 2.不能查询类型
 
 ```java
 //        if(doubleGenericClass instanceof  GenericClass<Double>)//不允许
@@ -61,7 +61,7 @@ GenericClass<int> doubleGenericClass = new GenericClass<>();//错误的
 //        if(doubleGenericClass instanceof  GenericClass)//允许
 ```
 
-###3.泛型类中静态变量类型失效
+### 3.泛型类中静态变量类型失效
 
 ```java
 //静态域或方法中不能引用类型变量
@@ -70,7 +70,7 @@ GenericClass<int> doubleGenericClass = new GenericClass<>();//错误的
 // private <T> T getInstance() {}
 ```
 
-###4.不能实例化参数类型
+### 4.不能实例化参数类型
 
 ```java
 public class GenericClass<T> {
@@ -83,7 +83,7 @@ public class GenericClass<T> {
 }
 ```
 
-###5.不能继承异常/不能捕获泛型实例
+### 5.不能继承异常/不能捕获泛型实例
 
 不能继承Exception/Throwable
 
@@ -116,7 +116,7 @@ public class GenericClass<T> {
     }
 ```
 
-###6.泛型的继承关系
+### 6.泛型的继承关系
 
 ```java
 public class Employee {
@@ -131,7 +131,7 @@ GenericClass<Worker> workerGenericClass = new GenericClass<>();
 
 注意：GenericClass<Employee>和GenericClass<Worker>没有任何关系
 
-###7.通配符
+### 7.通配符
 
 ？ extends X  表示类型的上界，类型参数是X的子类
 
